@@ -33,6 +33,16 @@ class Spotifybot:
         sleep(10)
 
 
+    def normal_login(self):
+        email_in = self.driver.find_element_by_xpath('//*[@id="login-username"]')
+        password_in = self.driver.find_element_by_xpath('//*[@id="login-password"]')
+        email_in.send_keys(username)
+        password_in.send_keys(passwd)
+
+        submit = self.driver.find_element_by_xpath('//*[@id="login-button"]')
+        submit.click()
+        sleep(10)
+
     def next_btn(self):
         # next_button = self.driver.find_element_by_xpath('//*[@id="main"]/div/div[2]/div[2]/footer/div/div[2]/div/div[1]/div[2]/button[1]')
         nexsongdiv = sbot.driver.find_element_by_xpath('//div[@aria-rowindex="'+str(self.index) +'"]')
@@ -115,6 +125,8 @@ class Spotifybot:
         sleep(1)
         plists = self.driver.find_elements_by_xpath('//*[@id="main"]/div/div[2]/div[3]/main/div[2]/div[2]/div/div/div[2]/section/div[2]/div/div[2]/div/div/div/div[2]/a')
         dict = {}
+        print("\n\nList of your playlists:")
+        
         for idx,plist in enumerate(plists):
             print(str(idx+1)+ ") " + plist.get_attribute('text'))
             dict[idx]=plist
@@ -130,7 +142,15 @@ class Spotifybot:
 
 sbot=Spotifybot()
 sbot.login()
+
+print("1) Facebook Login")
+print("2) Normal/google login")
+ltype = input('Select the type of login you prefer(1 or 2): ')
+if ltype=='1':
+    sbot.fb_login()
+else:
+    sbot.normal_login()
 # sbot.gm_login()
-sbot.fb_login()
+# sbot.fb_login()
 sbot.playlist()
 
