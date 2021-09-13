@@ -1,5 +1,5 @@
 # Uninterruptify
-* A selenium based automation that lets you play any number of songs in a playlist without any ads.
+* A selenium based automation that lets you play upto 100 songs in a playlist without any ads.
 * Just last 6 seconds of the songs will be skipped.
 
 ## Dependencies:
