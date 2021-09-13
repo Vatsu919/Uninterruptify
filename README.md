@@ -1,4 +1,4 @@
-# Uninterruptify
+# Uninterruptify(A spotify clone)
 * A selenium based automation that lets you play upto 100 songs in a spotify playlist without any ads.
 * Just last 6 seconds of the songs will be skipped.
 
