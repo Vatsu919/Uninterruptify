@@ -10,9 +10,10 @@
 
 ## How to Use:
 * First clone the repository at a desired location.
-* For now,only facebook login is available for the bot.
+* For now,only facebook login or normal/google login are available for the bot.
 * Enter your username/Phone number and password in the secrets.py file.
 * Then run the spotify_bot.py file with `python spotify_bot.py`.
+* First you will have to select the preferred mode of login.
 * Now in the console window, you will get a list of all the playlists that you have liked or created.
 * Select the number corresponding to that playlist and it will start playing from the beginning.
 * Can play upto 100 songs without a single ad.
